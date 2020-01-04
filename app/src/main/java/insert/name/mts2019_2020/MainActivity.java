@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("danilova");
-        Button testSamoOpustiSeVuce;
         LinearLayout vaziBuraz; //Nadam se da ces povuci kod pre nego sto editujes
     }
 }
