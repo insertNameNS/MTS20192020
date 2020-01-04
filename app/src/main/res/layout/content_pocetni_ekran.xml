@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".PocetniEkranActivity"
-    tools:showIn="@layout/app_bar_pocetni_ekran">
+    tools:showIn="@layout/app_bar_pocetni_ekran"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:id="@+id/policija"
+        android:text="Policija"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:id="@+id/hinta_pomoc"
+        android:text="Hitna pomoc"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:id="@+id/vatrogasci"
+        android:text="Vatrogasci"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:id="@+id/sos_poruka"
+        android:text="SOS poruka"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"/>
+    
+</LinearLayout>

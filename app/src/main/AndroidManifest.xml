@@ -10,10 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PodesavanjeJezika"
+            android:parentActivityName=".PocetniEkranActivity"/>
+        <activity
+            android:name=".PodesavanjaSosPoruke"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
+            android:name=".MorzeovaAzbuka"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
+            android:name=".ListaSluzbi"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
+            android:name=".PrvaPomoc"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
+            android:name=".Lampa"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
+            android:name=".Kompas"
+            android:parentActivityName=".PocetniEkranActivity" />
+        <activity
             android:name=".PocetniEkranActivity"
             android:label="@string/title_activity_pocetni_ekran"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".MainActivity">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

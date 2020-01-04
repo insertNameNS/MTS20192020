@@ -1,5 +1,6 @@
 package insert.name.mts2019_2020;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -45,6 +46,7 @@ public class PocetniEkranActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        setTitle("Emergency");
     }
 
     @Override
@@ -72,7 +74,7 @@ public class PocetniEkranActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.podesavanja) {
             return true;
         }
 
@@ -85,18 +87,29 @@ public class PocetniEkranActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_kompas) { //Handleuje klik na stavke iz navigation drawera
+            Intent i = new Intent(this, Kompas.class);
+            startActivity(i);
+        } else if (id == R.id.nav_lampa) {
+            Intent i = new Intent(this, Lampa.class);
+            startActivity(i);
+        } else if (id == R.id.nav_vremenska_prognoza) {
+            //Ne znamo jos sta cemo
+        } else if (id == R.id.nav_prva_pomoc) {
+            Intent i = new Intent(this, PrvaPomoc.class);
+            startActivity(i);
+        } else if (id == R.id.nav_lista_sluzbi) {
+            Intent i = new Intent(this, ListaSluzbi.class);
+            startActivity(i);
+        } else if (id == R.id.nav_morzeova_azbuka) {
+            Intent i = new Intent(this, MorzeovaAzbuka.class);
+            startActivity(i);
+        } else if (id == R.id.nav_sos_poruka) {
+            Intent i = new Intent(this, PodesavanjaSosPoruke.class);
+            startActivity(i);
+        } else if (id == R.id.nav_jezik) {
+            Intent i = new Intent(this, PodesavanjeJezika.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
