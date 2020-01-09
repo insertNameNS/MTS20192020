@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PodesavanjaSosPoruke">
+    tools:context=".PodesavanjaSosPoruke"
+    android:padding="10dp"
+    android:id="@+id/sms_layout">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/sms_podesavanja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Izmena sigurnosne poruke"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/sms_podesavanja"
+        android:id="@+id/linija1"
+        android:background="#555555"/>
+
+    <EditText
+        android:id="@+id/sms_poruka"
+        android:layout_below="@+id/linija1"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ovo ce biti teks poruke koji treba promeniti kasnije ali je za sada tu kako bi smo ynali kako ovo izgleda"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sms_info_linear"
+        android:orientation="horizontal"
+        android:layout_below="@id/sms_poruka">
+
+        <ImageView
+            android:id="@+id/info_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_outline_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ovde ima jako puno texta da bi smo mogli da vidimo kako izgleda kada text predju u nov ired"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sms_info_linear2"
+        android:orientation="horizontal"
+        android:layout_below="@id/sms_info_linear"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/sms_brojevi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sigurni brojevi"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            >
+            <Button
+                android:id="@+id/dodaj_broj"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_add_circle_outline_black_24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/sms_info_linear2"
+        android:id="@+id/linija2"
+        android:background="#555555"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lista_brojeva"
+        android:layout_below="@id/linija2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="submit"/>
+
+
+</RelativeLayout>
